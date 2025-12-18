@@ -57,3 +57,18 @@ footer {text-align:center; padding:20px; background:#222; color:#ccc; margin-top
     header .header-text h1 {font-size:2rem;}
     section h2 {font-size:1.5rem;}
 }
+/* WhatsApp */
+.contact-btn.whatsapp {
+    background-color: #25D366;
+}
+.contact-btn.whatsapp:hover {
+    background-color: #1ebe57;
+}
+
+/* Zalo */
+.contact-btn.zalo {
+    background-color: #015ce0;
+}
+.contact-btn.zalo:hover {
+    background-color: #448cf1;
+}
