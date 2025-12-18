@@ -1,0 +1,59 @@
+/* Reset cơ bản */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, sans-serif;}
+body {background:#f4f6f8; color:#333; line-height:1.6;}
+
+/* Header */
+header {background: linear-gradient(135deg, #4facfe, #00f2fe); color:white; padding:50px 20px;}
+header .header-content {display:flex; align-items:center; max-width:900px; margin:0 auto; gap:30px;}
+header img.avatar {width:150px; height:150px; object-fit:cover; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;}
+header img.avatar:hover {transform:scale(1.05); box-shadow:0 8px 25px rgba(0,0,0,0.3);}
+header .header-text h1 {font-size:2.5rem; margin-bottom:10px;}
+header .header-text p {font-size:1.2rem; margin-bottom:5px;}
+header .contact-btn {margin-top:10px; padding:10px 20px; background-color:#25D366; color:white; border-radius:30px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition: background-color 0.3s, transform 0.2s;}
+header .contact-btn:hover {background-color:#1ebe57; transform:scale(1.05);}
+header .contact-btn i {font-size:1.3rem;}
+
+/* Section chung */
+section {max-width:900px; margin:30px auto; padding:15 px 20px;}
+section h2 {font-size:2rem; margin-bottom:15px; color:#4facfe;}
+section#about p {font-size:1.3rem;}
+
+/* Thông tin cá nhân */
+#personal-info ul {list-style:none; padding:0;}
+#personal-info li {font-size:1.3rem; margin-bottom:10px;}
+#personal-info a {color:#25D366; text-decoration:none; transition: color 0.3s;}
+#personal-info a:hover {color:#1ebe57;}
+
+/* Học vấn */
+#education .education-item {display:block; margin-top:15px;}
+#education .edu-text {font-size:1.3rem; margin-bottom:10px;}
+#education .edu-image img {width:100%; max-width:800px; height:auto; display:block; margin-top:15px; border:2px solid #4facfe; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:contain;}
+
+/* Kinh nghiệm */
+#experience ul {list-style:disc; padding-left:20px;}
+#experience li {font-size:1.3rem; margin-bottom:15px;}
+
+/* Chứng chỉ */
+#certifications .cert-item {margin-bottom:25px;}
+#certifications .cert-item p {font-size:1.5rem; font-weight:500; margin-bottom:10px;}
+#certifications .cert-item img {width:100%; max-width:800px; height:auto; display:block; border:2px solid #4facfe; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:contain;}
+
+/* Footer */
+footer {text-align:center; padding:20px; background:#222; color:#ccc; margin-top:50px;}
+
+/* Lightbox */
+#lightbox {display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;}
+#lightbox img.lightbox-content {max-width:90%; max-height:80%; border-radius:10px;}
+#lightbox .close {position:absolute; top:20px; right:35px; color:white; font-size:40px; cursor:pointer;}
+#lightbox .prev, #lightbox .next {cursor:pointer; position:absolute; top:50%; width:auto; padding:16px; color:white; font-weight:bold; font-size:40px; user-select:none; transform:translateY(-50%);}
+#lightbox .prev {left:20px;} #lightbox .next {right:20px;}
+#lightbox .prev:hover, #lightbox .next:hover, #lightbox .close:hover {color:#ddd;}
+
+/* Responsive */
+@media (max-width:768px){
+    header .header-content {flex-direction:column; text-align:center;}
+    header img.avatar {width:120px; height:120px;}
+    #education .edu-image img, #certifications .cert-item img {max-width:100%;}
+    header .header-text h1 {font-size:2rem;}
+    section h2 {font-size:1.5rem;}
+}
