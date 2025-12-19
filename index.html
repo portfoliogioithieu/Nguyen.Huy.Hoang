@@ -1,160 +1,213 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <title>Portfolio Nguyễn Huy Hoàng</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
+/* Reset cơ bản */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Tahoma, sans-serif;}
+body {background:#f4f6f8; color:#333; line-height:1.6;}
 
-<!-- Header -->
-<header>
-    <div class="header-content">
-        <img src="avatar.jpg" alt="Ảnh đại diện của Hoàng" class="avatar">
-        <div class="header-text">
-            <h1>Nguyễn Huy Hoàng</h1>
-            <p><b>Kỹ Sư</b></p>
-            <p>Hiện công tác tại Vina Offshore Engineering Company Ltd.</p>
-    <div class="contact-buttons">
-        <a href="https://wa.me/84913677392" class="contact-btn whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i> <b>WhatsApp</b>
-        </a>
+/* Header */
+header {background: linear-gradient(135deg, #4facfe, #00f2fe); color:white; padding:50px 20px;}
+header .header-content {display:flex; align-items:center; max-width:900px; margin:0 auto; gap:30px;}
+header img.avatar {width:200px; height:200px; object-fit:cover; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;}
+header img.avatar:hover {transform:scale(1.05); box-shadow:0 8px 25px rgba(0,0,0,0.3);}
+header .header-text h1 {font-size:2.5rem; margin-bottom:10px;}
+header .header-text p {font-size:1.5rem; margin-bottom:5px;}
+header .contact-btn {margin-top:10px; padding:10px 20px; background-color:#25D366; color:white; border-radius:30px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition: background-color 0.3s, transform 0.2s;}
+header .contact-btn:hover {background-color:#1ebe57; transform:scale(1.05);}
+header .contact-btn i {font-size:2rem;}
 
-        <a href="https://zalo.me/0913677392" class="contact-btn zalo" target="_blank">
-            <i class="fas fa-comment-dots"></i> <b>Zalo</b>
-        </a>
-</div>
+/* Section chung */
+section {max-width:900px; margin:30px auto; padding:15px 20px;}
+section h2 {font-size:2rem; margin-bottom:15px; color:#4facfe; border-left: 5px solid #4facfe; padding-left: 10px;}
+section#about p {font-size:1.3rem;text-align: justify;text-justify: inter-word;}
 
-        </div>
-    </div>
-</header>
+/* Thông tin cá nhân */
+#personal-info ul {list-style:none; padding:0;}
+#personal-info li {font-size:1.3rem; margin-bottom:10px;}
+#personal-info a {color:#25D366; text-decoration:none; transition: color 0.3s;}
+#personal-info a:hover {color:#1ebe57;}
 
-<!-- Giới thiệu -->
-<section id="about">
-    <h2>Giới thiệu</h2>
-    <p>Xin chào! Tôi là Nguyễn Huy Hoàng, một kỹ sư tốt nghiệp ngành Kỹ thuật tại Đại học Mỏ - Địa Chất. 
-        Tôi đã tích lũy kinh nghiệm phong phú trong nhiều vai trò khác nhau và đạt được nhiều chứng chỉ chuyên môn quan trọng. 
-        Tôi đam mê áp dụng kiến thức kỹ thuật, sáng tạo trong giải pháp công việc và luôn hướng tới hiệu quả cao, an toàn và chất lượng trong mọi dự án.</p>
-</section>
+/* Học vấn */
+#education .education-item {display:block; margin-top:15px;}
+#education .edu-text {font-size:1.3rem; margin-bottom:10px;}
 
-<!-- Thông tin cá nhân -->
-<section id="personal-info">
-    <h2>Thông tin cá nhân</h2>
-    <ul>
-        <li><b>Ngày sinh:</b> 07/11/1977</li>
-        <li><b>Địa chỉ:</b> Phường Vũng Tàu, TP Hồ Chí Minh, Việt Nam</li>
-        <li><b>Email:</b> huyhoang@example.com</li>
-        <li><b>Số điện thoại:</b> <a href="tel:0913677392">0913677392</a></li>
-    </ul>
-</section>
+/* Kinh nghiệm */
+#experience ul {list-style:disc; padding-left:20px;}
+#experience li {font-size:1.3rem; margin-bottom:15px;}
 
-<!-- Học vấn -->
-<section id="education">
-    <h2>Học vấn</h2>
-    <div class="education-item">
-        <div class="edu-text">
-            <p><strong>Đại học:</strong> Đại học Mỏ - Địa Chất Hà Nội</p>
-            <p><strong>Ngành:</strong> Khoan - Khai Thác Dầu Khí</p>
-            <p><strong>Bằng tốt nghiệp:</strong> Kỹ sư</p>
-            <p><strong>Năm tốt nghiệp:</strong> 1999</p>
-        </div>
-        <div class="edu-image">
-            <img src="bangdaihoc.jpg" alt="Bằng tốt nghiệp Đại học" class="gallery-item">
-            <img src="chungchingoaingu.jpg" alt="Chứng chỉ ngoại ngữ" class="gallery-item">
-        </div>
-    </div>
-</section>
+/* Chứng chỉ */
+#certifications .cert-item {margin-bottom:25px;}
+#certifications .cert-item p {font-size:1.5rem; font-weight:500; margin-bottom:10px;}
+#certifications .cert-item img {width:100%; max-width:800px; height:auto; display:block; border:2px solid #4facfe; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:contain;}
 
-<!-- Kinh nghiệm -->
-<section id="experience">
-    <h2>Kinh nghiệm làm việc</h2>
-    <ul>
-        <li>AutoCad Draftsman</li>
-        <li>Production Supervisor</li>
-        <li>Offshore Surveyor, Offshore Installation Supervisor</li>
-        <li>QA/QC Inspector</li>
-        <li>Costing Engineer</li>
-    </ul>
-</section>
+/* Ideal */
+#idea ul {list-style:disc; padding-left:20px;}
+#idea li {font-size:1.3rem; margin-bottom:5px;}
+section#idea p {font-size:1.3rem;}
 
-<!-- Chứng chỉ -->
-<section id="certifications">
-    <h2>Các khóa học đã tham gia </h2>
-    <div class="cert-gallery">
-        <div class="cert-item">
-            <p>PV Elite Software Training - thiết kế bồn bể áp lực Pressure Vessel</p>
-            <img src="chungchi1.jpg" alt="PV Elite Software Training" class="gallery-item">
-        </div>
-        <div class="cert-item">
-            <p>Eddy Current Cert. Level II</p>
-            <img src="chungchi2.jpg" alt="Eddy Current Certi. Level II" class="gallery-item">
-        </div>
-        <div class="cert-item">
-            <p>Visual Inspection Level II</p>
-            <img src="chungchi3.jpg" alt="Visual Inspection Level II" class="gallery-item">
-        </div>
-        <div class="cert-item">
-            <p>Basic Coating Inspection Cert.</p>
-            <img src="chungchi4.jpg" alt="Basic Coating Inspection Cert." class="gallery-item">
-        </div>
-        <div class="cert-item">
-            <p>Scaffolding Certificate</p>
-            <img src="chungchi5.jpg" alt="Scaffolding Certificate" class="gallery-item">
-        </div>
-        <div class="cert-item">
-            <p>ISO Certificate</p>
-            <img src="chungchi6.jpg" alt="ISO Certificate" class="gallery-item">
-        </div>
-    </div>
-</section>
+/* Footer */
+footer {text-align:center; padding:20px; background:#222; color:#ccc; margin-top:50px;}
 
-<!-- Những dự án đã làm -->
-<section id="projects">
-    <h2>Những dự án đã thực hiện</h2>
+/* Lightbox */
+#lightbox {display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); align-items:center; justify-content:center;}
+#lightbox img.lightbox-content {max-width:90%; max-height:80%; border-radius:10px;}
+#lightbox .close {position:absolute; top:20px; right:35px; color:white; font-size:40px; cursor:pointer;}
+#lightbox .prev, #lightbox .next {cursor:pointer; position:absolute; top:50%; width:auto; padding:16px; color:white; font-weight:bold; font-size:40px; user-select:none; transform:translateY(-50%);}
+#lightbox .prev {left:20px;} #lightbox .next {right:20px;}
+#lightbox .prev:hover, #lightbox .next:hover, #lightbox .close:hover {color:#ddd;}
 
-    <div class="projects-gallery">
-        <img src="project1.jpg" alt="Dự án offshore 1" class="gallery-item">
-        <img src="project2.jpg" alt="Dự án offshore 2" class="gallery-item">
-        <img src="project3.jpg" alt="Dự án offshore 3" class="gallery-item">
-        <img src="project4.jpg" alt="Dự án offshore 4" class="gallery-item">
-        <img src="project5.jpg" alt="Dự án offshore 5" class="gallery-item">
-        <img src="project6.jpg" alt="Dự án offshore 6" class="gallery-item">
-        <img src="project7.jpg" alt="Dự án offshore 7" class="gallery-item">
-        <img src="project8.jpg" alt="Dự án offshore 8" class="gallery-item">
-        <img src="project9.jpg" alt="Dự án offshore 9" class="gallery-item">   
-        <img src="project10.jpg" alt="Dự án offshore 10" class="gallery-item">
-        <img src="project11.jpg" alt="Dự án offshore 11" class="gallery-item">
-        <img src="project12.jpg" alt="Dự án offshore 12" class="gallery-item">
-        <img src="project13.jpg" alt="Dự án offshore 13" class="gallery-item">
-        <img src="project14.jpg" alt="Dự án offshore 14" class="gallery-item">
-        <img src="project15.jpg" alt="Dự án offshore 15" class="gallery-item">
-        <img src="project16.jpg" alt="Dự án offshore 16" class="gallery-item">
-        <img src="project17.jpg" alt="Dự án offshore 17" class="gallery-item">
-        <img src="project18.jpg" alt="Dự án offshore 18" class="gallery-item">
-        <img src="project19.jpg" alt="Dự án offshore 19" class="gallery-item">
-        <img src="project20.jpg" alt="Dự án offshore 20" class="gallery-item">        
-    </div>
-</section>
+/* Responsive */
+@media (max-width:768px){
+    header .header-content {flex-direction:column; text-align:center;}
+    header img.avatar {width:120px; height:120px;}
+    #education .edu-image img, #certifications .cert-item img {max-width:100%;}
+    header .header-text h1 {font-size:2rem;}
+    section h2 {font-size:1.5rem;}
+}
+.contact-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
 
+/* WhatsApp */
+.contact-btn.whatsapp {
+    background-color: #25D366;
+}
+.contact-btn.whatsapp:hover {
+    background-color: #1ebe57;
+}
 
-<!-- Lightbox overlay -->
-<div id="lightbox">
-    <span class="close">&times;</span>
-    <img class="lightbox-content" id="lightbox-img">
-    <a class="prev">&#10094;</a>
-    <a class="next">&#10095;</a>
-</div>
+/* Zalo */
+.contact-btn.zalo {
+    background-color: #015ce0;
+}
+.contact-btn.zalo:hover {
+    background-color: #448cf1;
+}
 
-<!-- Footer -->
-<footer>
-    © 2025 Nguyễn Huy Hoàng | <a href="https://wa.me/84913677392" target="_blank" style="color:#25D366;">WhatsApp</a>
-</footer>
+/* ===== Projects Gallery (Minimal) ===== */
+#projects .projects-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
 
-<script src="script.js"></script>
-</body>
-</html>
+#projects .projects-gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
+#projects .projects-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+}
+/* ===== PDF / A4 PRINT OPTIMIZATION ===== */
+@media print {
 
+    /* Setup trang A4 */
+    @page {
+        size: A4;
+        margin: 18mm 16mm;
+    }
 
+    body {
+        background: #fff;
+        color: #000;
+        font-size: 11pt;
+        line-height: 1.45;
+    }
 
+    /* Header gọn – không nền */
+    header {
+        background: none !important;
+        color: #000 !important;
+        padding: 10mm 0 6mm;
+        border-bottom: 2px solid #000;
+    }
+
+    header .header-content {
+        flex-direction: row;
+        gap: 15mm;
+    }
+
+    header img.avatar {
+        width: 38mm;
+        height: 38mm;
+        box-shadow: none;
+    }
+
+    /* Ẩn nút, icon không cần thiết */
+    .contact-btn,
+    #lightbox,
+    .prev,
+    .next,
+    .close {
+        display: none !important;
+    }
+
+    /* Section */
+    section {
+        max-width: 100%;
+        margin: 6mm 0;
+        padding: 0;
+        page-break-inside: avoid;
+    }
+
+    section h2 {
+        font-size: 14pt;
+        color: #000;
+        border-left: 4px solid #000;
+        padding-left: 6px;
+        margin-bottom: 4mm;
+    }
+
+    section p,
+    section li {
+        font-size: 11pt;
+    }
+
+    /* Danh sách */
+    ul {
+        padding-left: 18px;
+    }
+
+    /* Gallery ảnh */
+    .projects-gallery,
+    .cert-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+    }
+
+    .projects-gallery img,
+    .cert-gallery img {
+        height: auto;
+        box-shadow: none;
+        border: 1px solid #999;
+        border-radius: 4px;
+    }
+
+    /* Học vấn */
+    #education .edu-image img {
+        max-width: 100%;
+        border: 1px solid #999;
+        box-shadow: none;
+    }
+
+    /* Footer */
+    footer {
+        background: none;
+        color: #000;
+        border-top: 1px solid #000;
+        font-size: 9pt;
+        margin-top: 8mm;
+    }
+}
+
+body p {
+    margin-bottom: 15px; /* khoảng cách 15px giữa các paragraph */
+    line-height: 1.6;    /* dễ đọc */
+}
