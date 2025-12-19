@@ -211,3 +211,28 @@ body p {
     margin-bottom: 15px; /* khoảng cách 15px giữa các paragraph */
     line-height: 1.6;    /* dễ đọc */
 }
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: opacity 0.3s, transform 0.3s;
+    z-index: 999;
+}
+
+#backToTop:hover {
+    background: #0056b3;
+    transform: translateY(-3px);
+}
