@@ -2,301 +2,122 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Cá Nhân</title>
+    <title>Portfolio Nguyễn Huy Hoàng</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Ví dụ CSS cơ bản để popup và slider hoạt động */
-        .popup, .slider-popup {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            justify-content: center;
-            align-items: center;
-            background: rgba(0,0,0,0.8);
-            z-index: 1000;
-        }
-        .popup-img, .slider-container img {
-            max-width: 90%;
-            max-height: 90%;
-        }
-        .close, .close-slider {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 30px;
-            color: white;
-            cursor: pointer;
-        }
-        .slider-container {
-            display: flex;
-            transition: transform 0.3s ease-in-out;
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 40px;
-            color: white;
-            background: rgba(0,0,0,0.3);
-            border: none;
-            cursor: pointer;
-            padding: 5px 10px;
-        }
-        .prev { left: 10px; }
-        .next { right: 10px; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- Popup xem ảnh -->
-    <div id="popup" class="popup">
-        <span class="close">&times;</span>
-        <button class="prev">&#10094;</button>
-        <img id="popupImg" class="popup-img">
-        <button class="next">&#10095;</button>
+<!-- Header -->
+<header>
+    <div class="header-content">
+        <img src="avatar.jpg" alt="Ảnh đại diện của Hoàng" class="avatar">
+        <div class="header-text">
+            <h1>Nguyễn Huy Hoàng</h1>
+            <p><b>Kỹ Sư</b></p>
+            <p>Hiện công tác tại Vina Offshore Engineering Company Ltd.</p>
+            <a href="https://wa.me/84913677392" class="contact-btn" target="_blank">
+                <i class="fab fa-whatsapp"></i> Liên hệ WhatsApp
+            <a href="https://zalo.me/0913677392" class="contact-btn zalo" target="_blank">
+                <i class="fas fa-comment-dots"></i> Zalo
+           
+            </a>
+        </div>
     </div>
+</header>
 
+<!-- Giới thiệu -->
+<section id="about">
+    <h2>Giới thiệu</h2>
+    <p>Xin chào! Tôi là Nguyễn Huy Hoàng, một kỹ sư tốt nghiệp ngành Kỹ thuật tại Đại học Mỏ - Địa Chất. 
+        Tôi đã tích lũy kinh nghiệm phong phú trong nhiều vai trò khác nhau và đạt được nhiều chứng chỉ chuyên môn quan trọng. 
+        Tôi đam mê áp dụng kiến thức kỹ thuật, sáng tạo trong giải pháp công việc và luôn hướng tới hiệu quả cao, an toàn và chất lượng trong mọi dự án.</p>
+</section>
 
-    <!-- Header -->
-    <header>
-        <img src="avatar.jpg" onclick="openPopup(this.src)" alt="Ảnh đại diện của Nguyên" class="avatar">
-        <h1>NGUYỄN HOÀNG NGUYÊN</h1>
-        <p>Sinh Viên Đại Học Bách Khoa TPHCM</p>
-    </header>
+<!-- Thông tin cá nhân -->
+<section id="personal-info">
+    <h2>Thông tin cá nhân</h2>
+    <ul>
+        <li><b>Ngày sinh:</b> 07/11/1977</li>
+        <li><b>Địa chỉ:</b> Phường Vũng Tàu, TP Hồ Chí Minh, Việt Nam</li>
+        <li><b>Email:</b> huyhoang@example.com</li>
+        <li><b>Số điện thoại:</b> <a href="tel:0913677392">0913677392</a></li>
+    </ul>
+</section>
 
-    <!-- Giới thiệu -->
-    <section id="about">
-        <h2>Giới thiệu</h2>
-        <p>Xin chào! Mình là Nguyên, hiện tại đang là sinh viên của ĐH Bách Khoa TPHCM.</p>
-        <p><strong>Ngày sinh:</strong> 20-09-2007 </p>
-        <p><strong>Địa chỉ: </strong>66A Hùng Vương, phường Vũng Tàu, TPHCM </p>
-        
-    </section>
-
-    <!-- Xác nhận kết quả đại học -->
-    <section id="university-result">
-        <h2>Xác nhận kết quả đậu đại học</h2>
-        <div class="university">
-            <img src="dau-dai-hoc.jpg" onclick="openPopup(this.src)" alt="Xác nhận kết quả đậu đại học">
-            <div class="uni-info">
-                <p class="title">Xác nhận trúng tuyển Đại học</p>
-                <p><strong>Trường:</strong> Đại học Bách Khoa TPHCM</p>
-                <p><strong>Ngành:</strong> Kỹ Thuật Cơ Khí</p>
-                <p><strong>Năm tuyển sinh:</strong> 2025</p>
-                <p><strong>Hình thức:</strong> Xét tuyển tổng hợp</p>
-            </div>
+<!-- Học vấn -->
+<section id="education">
+    <h2>Học vấn</h2>
+    <div class="education-item">
+        <div class="edu-text">
+            <p><strong>Đại học:</strong> Đại học Mỏ - Địa Chất Hà Nội</p>
+            <p><strong>Ngành:</strong> Khoan - Khai Thác Dầu Khí</p>
+            <p><strong>Bằng tốt nghiệp:</strong> Kỹ sư</p>
+            <p><strong>Năm tốt nghiệp:</strong> 1999</p>
         </div>
-    </section>
-
-    <!-- Tính điểm xét tuyển tổng hợp -->
-    <section id="diem-xet-tuyen">
-    <h2>Điểm xét tuyển đại học</h2>
-    <p>Điểm xét tuyển ĐH của mình là: 83.41 điểm (năm 2025) .</p>
-    <p><strong>Cách tính điểm xét tuyển tổng hợp của mình như dưới đây:</strong></p>
-
-    <div class="diem-xet-tuyen">
-        <img src="diem.xet.tuyenDH-01.jpg" onclick="openDiemPopup(0)">
-        <img src="diem.xet.tuyenDH-02.jpg" onclick="openDiemPopup(1)">
-        <img src="diem.xet.tuyenDH-03.jpg" onclick="openDiemPopup(2)">
+        <div class="edu-image">
+            <img src="bangdaihoc.jpg" alt="Bằng tốt nghiệp Đại học" class="gallery-item">
+            <img src="chungchingoaingu.jpg" alt="Chứng chỉ ngoại ngữ" class="gallery-item">
+        </div>
     </div>
-    </section>
+</section>
 
+<!-- Kinh nghiệm -->
+<section id="experience">
+    <h2>Kinh nghiệm làm việc</h2>
+    <ul>
+        <li>AutoCad Drawing Operator</li>
+        <li>Production Supervisor</li>
+        <li>Offshore Surveyor, Offshore Installation Supervisor</li>
+        <li>QA/QC Inspector</li>
+        <li>Costing Engineer</li>
+    </ul>
+</section>
 
-    <!-- Kết quả đánh giá năng lực -->
-    <section id="assessment">
-        <h2>Kết quả đánh giá năng lực</h2>
-        <div class="assessment">
-            <img src="assessment.jpg" alt="Minh họa đánh giá năng lực" class="assessment-img">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Môn</th>
-                        <th>Điểm</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td>Tiếng Việt</td><td>260</td></tr>
-                    <tr><td>Tiếng Anh</td><td>222</td></tr>
-                    <tr><td>Toán học</td><td>217</td></tr>
-                    <tr><td>Tư duy Khoa học</td><td>267</td></tr>
-                    <tr><td><Strong>Tổng điểm</Strong></td><td><strong>966</strong></td></tr>
-                </tbody>
-            </table>
+<!-- Chứng chỉ -->
+<section id="certifications">
+    <h2>Chứng chỉ đạt được trong quá trình làm việc</h2>
+    <div class="cert-gallery">
+        <div class="cert-item">
+            <p>PV Elite Software Training - thiết kế bồn bể áp lực Pressure Vessel</p>
+            <img src="chungchi1.jpg" alt="PV Elite Software Training" class="gallery-item">
         </div>
-    </section>
-
-    <!-- Chứng chỉ & Thành tích -->
-    <section id="certificates">
-        <h2>Chứng chỉ & Thành tích</h2>
-        <div class="certificates">
-            <article class="certificate">
-                <img src="hsg-tinh.jpg" onclick="openPopup(this.src)" alt="Giải nhất HSG cấp tỉnh">
-                <p class="title">Giải nhất HSG cấp tỉnh</p>
-                <p class="year">2024-2025</p>
-            </article>
-            <article class="certificate">
-                <img src="ielts.jpg" onclick="openPopup(this.src)" alt="Chứng chỉ ngoại ngữ IELTS">
-                <p class="title">Chứng chỉ ngoại ngữ IELTS</p>
-                <p class="year">2024</p>
-            </article>
+        <div class="cert-item">
+            <p>Eddy Current Cert. Level II</p>
+            <img src="chungchi2.jpg" alt="Eddy Current Certi. Level II" class="gallery-item">
         </div>
-    </section>
-
-    <!-- Giấy khen THPT -->
-    <section id="awards">
-        <h2>Giấy khen THPT</h2>
-        <div class="awards">
-            <article class="award">
-                <img src="lop10.jpg" onclick="openPopup(this.src)" alt="Giấy khen lớp 10">
-                <p class="title">Học sinh giỏi – Lớp 10</p>
-                <p class="year">2022-2023</p>
-            </article>
-            <article class="award">
-                <img src="lop11.jpg" onclick="openPopup(this.src)" alt="Giấy khen lớp 11">
-                <p class="title">Học sinh giỏi – Lớp 11</p>
-                <p class="year">2023-2024</p>
-            </article>
-            <article class="award">
-                <img src="lop12.jpg" onclick="openPopup(this.src)" alt="Giấy khen lớp 12">
-                <p class="title">Học sinh xuất sắc – Lớp 12</p>
-                <p class="year">2024-2025</p>
-            </article>
+        <div class="cert-item">
+            <p>Visual Inspection Level II</p>
+            <img src="chungchi3.jpg" alt="Visual Inspection Level II" class="gallery-item">
         </div>
-    </section>
-
-    <!-- Học bạ THPT -->
-    <section id="transcript">
-        <h2>Học bạ THPT</h2>
-        <button id="viewAllBtn">Xem tất cả</button>
-
-        <div id="sliderPopup" class="slider-popup">
-            <span class="close-slider">&times;</span>
-            <div class="slider-container">
-                <img src="hocba1.jpg" alt="Trang 1">
-                <img src="hocba2.jpg" alt="Trang 2">
-                <img src="hocba3.jpg" alt="Trang 3">
-                <img src="hocba4.jpg" alt="Trang 4">
-                <img src="hocba5.jpg" alt="Trang 5">
-                <img src="hocba6.jpg" alt="Trang 6">
-                <img src="hocba7.jpg" alt="Trang 7">
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+        <div class="cert-item">
+            <p>Basic Coating Inspection Cert.</p>
+            <img src="chungchi4.jpg" alt="Basic Coating Inspection Cert." class="gallery-item">
         </div>
-    </section>
+        <div class="cert-item">
+            <p>Scaffolding Certificate</p>
+            <img src="chungchi5.jpg" alt="Scaffolding Certificate" class="gallery-item">
+        </div>
+        <div class="cert-item">
+            <p>ISO Certificate</p>
+            <img src="chungchi6.jpg" alt="ISO Certificate" class="gallery-item">
+        </div>
+    </div>
+</section>
 
-    <!-- Liên hệ -->
-    <section id="contact">
-        <h2>Liên hệ</h2>
-        <p><Strong>Email:</Strong> nguyenhoangnguyenvt2009@gmail.com</p>
-        <p><Strong>Phone:</Strong> +84 388 123 546</p>
-    </section>
+<!-- Lightbox overlay -->
+<div id="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+</div>
 
-    <footer>
-        <p>© 2025 Nguyên Portfolio</p>
-    </footer>
+<!-- Footer -->
+<footer>
+    © 2025 Nguyễn Huy Hoàng | <a href="https://wa.me/84913677392" target="_blank" style="color:#25D366;">WhatsApp</a>
+</footer>
 
-    <!-- Script -->
-<script>
-/* ====== BIẾN CHUNG ====== */
-const popup = document.getElementById("popup");
-const popupImg = document.getElementById("popupImg");
-const popupPrev = popup.querySelector(".prev");
-const popupNext = popup.querySelector(".next");
-const popupClose = popup.querySelector(".close");
-
-/* ====== POPUP ẢNH THƯỜNG ====== */
-function openPopup(src) {
-    popupImg.src = src;
-    popup.style.display = "flex";
-    popupPrev.style.display = "none";
-    popupNext.style.display = "none";
-    isDiemPopup = false;
-}
-
-/* ====== POPUP ĐIỂM XÉT TUYỂN ====== */
-const diemImages = [
-    "diem.xet.tuyenDH-01.jpg",
-    "diem.xet.tuyenDH-02.jpg",
-    "diem.xet.tuyenDH-03.jpg"
-];
-
-let diemIndex = 0;
-let isDiemPopup = false;
-
-function openDiemPopup(index) {
-    diemIndex = index;
-    popupImg.src = diemImages[diemIndex];
-    popup.style.display = "flex";
-    popupPrev.style.display = "block";
-    popupNext.style.display = "block";
-    isDiemPopup = true;
-}
-
-/* ====== ĐIỀU HƯỚNG ====== */
-popupNext.onclick = () => {
-    if (!isDiemPopup) return;
-    diemIndex = (diemIndex + 1) % diemImages.length;
-    popupImg.src = diemImages[diemIndex];
-};
-
-popupPrev.onclick = () => {
-    if (!isDiemPopup) return;
-    diemIndex = (diemIndex - 1 + diemImages.length) % diemImages.length;
-    popupImg.src = diemImages[diemIndex];
-};
-
-/* ====== ĐÓNG POPUP ====== */
-popupClose.onclick = () => popup.style.display = "none";
-
-popup.addEventListener("click", (e) => {
-    if (e.target === popup) popup.style.display = "none";
-});
-
-document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") popup.style.display = "none";
-});
-
-/* ====== SLIDER HỌC BẠ ====== */
-const viewAllBtn = document.getElementById("viewAllBtn");
-const sliderPopup = document.getElementById("sliderPopup");
-const sliderContainer = sliderPopup.querySelector(".slider-container");
-const closeSlider = sliderPopup.querySelector(".close-slider");
-const prevBtn = sliderPopup.querySelector(".prev");
-const nextBtn = sliderPopup.querySelector(".next");
-
-let currentIndex = 0;
-
-viewAllBtn.onclick = () => {
-    sliderPopup.style.display = "flex";
-    showSlide(currentIndex);
-};
-
-closeSlider.onclick = () => sliderPopup.style.display = "none";
-
-function showSlide(index) {
-    const slideWidth = sliderContainer.children[0].offsetWidth;
-    sliderContainer.style.transform = `translateX(-${index * slideWidth}px)`;
-}
-
-nextBtn.onclick = () => {
-    currentIndex = (currentIndex + 1) % sliderContainer.children.length;
-    showSlide(currentIndex);
-};
-
-prevBtn.onclick = () => {
-    currentIndex = (currentIndex - 1 + sliderContainer.children.length) % sliderContainer.children.length;
-    showSlide(currentIndex);
-};
-
-window.addEventListener("resize", () => showSlide(currentIndex));
-
-sliderPopup.addEventListener("click", (e) => {
-    if (e.target === sliderPopup) sliderPopup.style.display = "none";
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
