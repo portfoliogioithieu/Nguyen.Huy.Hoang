@@ -8,10 +8,10 @@ header .header-content {display:flex; align-items:center; max-width:900px; margi
 header img.avatar {width:150px; height:150px; object-fit:cover; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;}
 header img.avatar:hover {transform:scale(1.05); box-shadow:0 8px 25px rgba(0,0,0,0.3);}
 header .header-text h1 {font-size:2.5rem; margin-bottom:10px;}
-header .header-text p {font-size:1.2rem; margin-bottom:5px;}
+header .header-text p {font-size:1.5rem; margin-bottom:5px;}
 header .contact-btn {margin-top:10px; padding:10px 20px; background-color:#25D366; color:white; border-radius:30px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition: background-color 0.3s, transform 0.2s;}
 header .contact-btn:hover {background-color:#1ebe57; transform:scale(1.05);}
-header .contact-btn i {font-size:1.3rem;}
+header .contact-btn i {font-size:2rem;}
 
 /* Section chung */
 section {max-width:900px; margin:30px auto; padding:15px 20px;}
@@ -101,3 +101,4 @@ footer {text-align:center; padding:20px; background:#222; color:#ccc; margin-top
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
+
