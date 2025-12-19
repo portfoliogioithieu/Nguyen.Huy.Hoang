@@ -30,7 +30,7 @@ section#about p {font-size:1.3rem;text-align: justify;text-justify: inter-word;}
 
 /* Kinh nghiệm */
 #experience ul {list-style:disc; padding-left:20px;}
-#experience li {font-size:1.3rem; margin-bottom:15px;}
+#experience li {font-size:1.3rem; margin-bottom:15px;text-align: justify;text-justify: inter-word;}
 
 /* Chứng chỉ */
 #certifications .cert-item {margin-bottom:25px;}
@@ -236,3 +236,4 @@ body p {
     background: #0056b3;
     transform: translateY(-3px);
 }
+
