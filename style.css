@@ -5,7 +5,7 @@ body {background:#f4f6f8; color:#333; line-height:1.6;}
 /* Header */
 header {background: linear-gradient(135deg, #4facfe, #00f2fe); color:white; padding:50px 20px;}
 header .header-content {display:flex; align-items:center; max-width:900px; margin:0 auto; gap:30px;}
-header img.avatar {width:150px; height:150px; object-fit:cover; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;}
+header img.avatar {width:200px; height:200px; object-fit:cover; border-radius:50%; cursor:pointer; box-shadow:0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s, box-shadow 0.3s;}
 header img.avatar:hover {transform:scale(1.05); box-shadow:0 8px 25px rgba(0,0,0,0.3);}
 header .header-text h1 {font-size:2.5rem; margin-bottom:10px;}
 header .header-text p {font-size:1.5rem; margin-bottom:5px;}
@@ -16,7 +16,7 @@ header .contact-btn i {font-size:2rem;}
 /* Section chung */
 section {max-width:900px; margin:30px auto; padding:15px 20px;}
 section h2 {font-size:2rem; margin-bottom:15px; color:#4facfe; border-left: 5px solid #4facfe; padding-left: 10px;}
-section#about p {font-size:1.3rem;}
+section#about p {font-size:1.3rem;text-align: justify;text-justify: inter-word;}
 
 /* Thông tin cá nhân */
 #personal-info ul {list-style:none; padding:0;}
@@ -27,7 +27,6 @@ section#about p {font-size:1.3rem;}
 /* Học vấn */
 #education .education-item {display:block; margin-top:15px;}
 #education .edu-text {font-size:1.3rem; margin-bottom:10px;}
-#education .edu-image img {width:100%; max-width:800px; height:auto; display:block; margin-top:15px; border:2px solid #4facfe; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:contain;}
 
 /* Kinh nghiệm */
 #experience ul {list-style:disc; padding-left:20px;}
@@ -37,6 +36,11 @@ section#about p {font-size:1.3rem;}
 #certifications .cert-item {margin-bottom:25px;}
 #certifications .cert-item p {font-size:1.5rem; font-weight:500; margin-bottom:10px;}
 #certifications .cert-item img {width:100%; max-width:800px; height:auto; display:block; border:2px solid #4facfe; border-radius:10px; box-shadow:0 4px 15px rgba(0,0,0,0.2); object-fit:contain;}
+
+/* Ideal */
+#idea ul {list-style:disc; padding-left:20px;}
+#idea li {font-size:1.3rem; margin-bottom:5px;}
+section#idea p {font-size:1.3rem;}
 
 /* Footer */
 footer {text-align:center; padding:20px; background:#222; color:#ccc; margin-top:50px;}
@@ -101,4 +105,109 @@ footer {text-align:center; padding:20px; background:#222; color:#ccc; margin-top
     transform: scale(1.05);
     box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
+/* ===== PDF / A4 PRINT OPTIMIZATION ===== */
+@media print {
 
+    /* Setup trang A4 */
+    @page {
+        size: A4;
+        margin: 18mm 16mm;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+        font-size: 11pt;
+        line-height: 1.45;
+    }
+
+    /* Header gọn – không nền */
+    header {
+        background: none !important;
+        color: #000 !important;
+        padding: 10mm 0 6mm;
+        border-bottom: 2px solid #000;
+    }
+
+    header .header-content {
+        flex-direction: row;
+        gap: 15mm;
+    }
+
+    header img.avatar {
+        width: 38mm;
+        height: 38mm;
+        box-shadow: none;
+    }
+
+    /* Ẩn nút, icon không cần thiết */
+    .contact-btn,
+    #lightbox,
+    .prev,
+    .next,
+    .close {
+        display: none !important;
+    }
+
+    /* Section */
+    section {
+        max-width: 100%;
+        margin: 6mm 0;
+        padding: 0;
+        page-break-inside: avoid;
+    }
+
+    section h2 {
+        font-size: 14pt;
+        color: #000;
+        border-left: 4px solid #000;
+        padding-left: 6px;
+        margin-bottom: 4mm;
+    }
+
+    section p,
+    section li {
+        font-size: 11pt;
+    }
+
+    /* Danh sách */
+    ul {
+        padding-left: 18px;
+    }
+
+    /* Gallery ảnh */
+    .projects-gallery,
+    .cert-gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4mm;
+    }
+
+    .projects-gallery img,
+    .cert-gallery img {
+        height: auto;
+        box-shadow: none;
+        border: 1px solid #999;
+        border-radius: 4px;
+    }
+
+    /* Học vấn */
+    #education .edu-image img {
+        max-width: 100%;
+        border: 1px solid #999;
+        box-shadow: none;
+    }
+
+    /* Footer */
+    footer {
+        background: none;
+        color: #000;
+        border-top: 1px solid #000;
+        font-size: 9pt;
+        margin-top: 8mm;
+    }
+}
+
+body p {
+    margin-bottom: 15px; /* khoảng cách 15px giữa các paragraph */
+    line-height: 1.6;    /* dễ đọc */
+}
