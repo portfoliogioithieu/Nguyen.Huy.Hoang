@@ -1282,3 +1282,63 @@ body {
         height: auto;
     }
 }
+/* ===== CAREER SUMMARY ===== */
+/* ===== CAREER SUMMARY BACKGROUND ===== */
+.career-summary {
+    background: #e6e7e6;
+    padding: 50px 60px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.career-summary {
+    margin: 60px 0;
+}
+
+.career-summary h2 {
+    font-size: 28px;
+    margin-bottom: 40px;
+    color: #1e3a8a;
+}
+
+/* ===== SUMMARY TIMELINE ===== */
+.summary-timeline {
+    list-style: none;
+    padding-left: 0;
+    border-left: 4px solid #f57105;
+}
+
+.summary-timeline li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.summary-timeline li::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    background: #f06408;
+    border-radius: 50%;
+}
+
+.summary-timeline .year {
+    font-weight: 700;
+    color: #1e3a8a;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.summary-timeline .content h4 {
+    margin: 0 0 6px;
+    font-size: 18px;
+}
+
+.summary-timeline .content p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+}
